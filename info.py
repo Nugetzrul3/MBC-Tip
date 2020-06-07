@@ -36,12 +36,12 @@ class Info(commands.Cog):
         else:
             pass
 
-            block = client.getblockchaininfo()['blocks']
+            block = client.getinfo()['blocks']
             hash_rate = round(client.getnetworkhashps() / 1000, 4)
-            difficulty = client.getblockchaininfo()['difficulty']
-            connection = client.getnetworkinfo()['connections']
-            client_version = client.getnetworkinfo()['subversion']
-            blockchain_size = round(client.getblockchaininfo()['size_on_disk'] / 1000000000, 3)
+            difficulty_pow = client.getinfo()['difficulty']['proof-of-work']
+            difficulty_pos = client.getinfo()['difficulty']['proof-of-stake']
+            connection = client.getinfo['connections']
+            client_version = client.getninfo['version']
 
             embed = discord.Embed(
                 title="**Magichain info**",
@@ -58,8 +58,12 @@ class Info(commands.Cog):
                 value="`{0} KH/s`".format(hash_rate),
                 inline=True)
             embed.add_field(
-                name="__Difficulty__",
-                value="`{0}`".format(difficulty),
+                name="__Difficulty (POW)__",
+                value="`{0}`".format(difficulty_pow),
+                inline=True)
+            embed.add_field(
+                name="__Difficulty (POS)__",
+                value="`{0}`".format(difficulty_pos),
                 inline=True)
             embed.add_field(
                 name="__Connection__",
@@ -68,10 +72,6 @@ class Info(commands.Cog):
             embed.add_field(
                 name="__Client Version__",
                 value="`{0}`".format(client_version),
-                inline=True)
-            embed.add_field(
-                name="__Block chain size__",
-                value="`About {0} GB`".format(blockchain_size),
                 inline=True)
             embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                              icon_url=self.bot.user.avatar_url_as(format='png', size=256))
