@@ -40,8 +40,8 @@ class Info(commands.Cog):
             hash_rate = round(client.getnetworkhashps() / 1000, 4)
             difficulty_pow = client.getinfo()['difficulty']['proof-of-work']
             difficulty_pos = client.getinfo()['difficulty']['proof-of-stake']
-            connection = client.getinfo['connections']
-            client_version = client.getninfo['version']
+            connection = client.getinfo()['connections']
+            client_version = client.getinfo()['version']
 
             embed = discord.Embed(
                 title="**Magichain info**",
