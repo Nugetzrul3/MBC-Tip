@@ -69,11 +69,10 @@ daemon=1
 server=1
 rpcuser={same as config.py}
 rpcpassword={same as config.py}
-addresstype=bech32 #If you want to set bech32 address as default
 ```
 
-3. Run `tipsugar.py`
+3. Run `tipmagi.py`
 
 ```
-python3 tipsugar.py
+python3 tipmagi.py
 ```
