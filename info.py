@@ -27,9 +27,9 @@ class Info(commands.Cog):
                 icon_url=ctx.author.avatar_url_as(format='png', size=256))
             embed.add_field(
                 name="First of all, please type `//help`",
-                value="Welcome to world of Tip Sugar !")
+                value="Welcome to world of Tip Magi !")
             embed.set_thumbnail(url=self.bot.user.avatar_url_as(format='png', size=1024))
-            embed.set_footer(text="Tip Sugar {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+            embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                              icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
             await ctx.channel.send(embed=embed)
@@ -44,7 +44,7 @@ class Info(commands.Cog):
             blockchain_size = round(client.getblockchaininfo()['size_on_disk'] / 1000000000, 3)
 
             embed = discord.Embed(
-                title="**Sugarchain info**",
+                title="**Magichain info**",
                 color=0x0043ff)
             embed.set_author(
                 name=ctx.author.display_name,
@@ -73,7 +73,7 @@ class Info(commands.Cog):
                 name="__Block chain size__",
                 value="`About {0} GB`".format(blockchain_size),
                 inline=True)
-            embed.set_footer(text="Tip Sugar {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+            embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                              icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
             await ctx.channel.send(embed=embed)

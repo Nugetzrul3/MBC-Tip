@@ -28,9 +28,9 @@ class Withdrawall(commands.Cog):
                 icon_url=ctx.author.avatar_url_as(format='png', size=256))
             embed.add_field(
                 name="First of all, please type `//help`",
-                value="Welcome to world of Tip Sugar !")
+                value="Welcome to world of Tip Magi !")
             embed.set_thumbnail(url=self.bot.user.avatar_url_as(format='png', size=1024))
-            embed.set_footer(text="Tip Sugar {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+            embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                              icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
             await ctx.channel.send(embed=embed)
@@ -48,7 +48,7 @@ class Withdrawall(commands.Cog):
                 embed.add_field(
                     name="Please check `//help` ",
                     value=" :mag: ")
-                embed.set_footer(text="Tip Sugar {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+                embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                                  icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                 await ctx.channel.send(embed=embed)
@@ -61,9 +61,9 @@ class Withdrawall(commands.Cog):
                         name=ctx.author.display_name,
                         icon_url=ctx.author.avatar_url_as(format='png', size=256))
                     embed.add_field(
-                        name="Amount must be at least 0.5 SUGAR.",
-                        value="Your balances : ```{0} SUGAR```".format(client.getbalance(account, config.CONFIRM)))
-                    embed.set_footer(text="Tip Sugar {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+                        name="Amount must be at least 0.5 MAGI.",
+                        value="Your balances : ```{0} MAGI```".format(client.getbalance(account, config.CONFIRM)))
+                    embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                                      icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                     await ctx.channel.send(embed=embed)
@@ -79,7 +79,7 @@ class Withdrawall(commands.Cog):
                         embed.add_field(
                             name="invalid address.",
                             value="`{0}`".format(str(address)))
-                        embed.set_footer(text="Tip Sugar {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+                        embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                                          icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                         await ctx.channel.send(embed=embed)
@@ -88,20 +88,20 @@ class Withdrawall(commands.Cog):
                         tx = client.gettransaction(txid)
                         txfee = tx['fee']
 
-                        client.move(account, "tipsugar_wallet", Decimal(str(config.FEE)))
-                        client.move("tipsugar_wallet", account, -txfee)
+                        client.move(account, "tipmagi_wallet", Decimal(str(config.FEE)))
+                        client.move("tipmagi_wallet", account, -txfee)
 
                         embed = discord.Embed(
                             title="**Block explorer**",
-                            url='https://1explorer.sugarchain.org/tx/{0}'.format(txid),
+                            url='https://m-chain.info/tx/{0}'.format(txid),
                             color=0x0043ff)
                         embed.set_author(
                             name=ctx.author.display_name,
                             icon_url=ctx.author.avatar_url_as(format='png', size=256))
                         embed.add_field(
-                            name="Withdrawal complete `{0} SUGAR`\nwithdraw fee is `{1} SUGAR`\nPlease check the transaction at the above link.".format(amount, str(config.FEE)),
-                            value="Your balances : `{0} SUGAR`".format(client.getbalance(account, config.CONFIRM)))
-                        embed.set_footer(text="Tip Sugar {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+                            name="Withdrawal complete `{0} MAGI`\nwithdraw fee is `{1} MAGI`\nPlease check the transaction at the above link.".format(amount, str(config.FEE)),
+                            value="Your balances : `{0} MAGI`".format(client.getbalance(account, config.CONFIRM)))
+                        embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                                          icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                         await ctx.channel.send(embed=embed)

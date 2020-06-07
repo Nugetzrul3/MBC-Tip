@@ -7,4 +7,4 @@ CONFIRM = 6
 FEE = 0.001 # withdraw Fee
 VERSION = "1.0.0"
 TOKEN = ''
-OWNER_ID = #int
+OWNER_ID = 
