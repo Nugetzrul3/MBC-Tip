@@ -1,4 +1,4 @@
-Tip Sugar
+Tip Magi
 ====
 Forked from Sugarchain's [Tip Bot](https://github.com/sugarchain-project/Tip-Sugar)
 
