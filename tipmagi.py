@@ -16,7 +16,7 @@ COMMANDS = [
     'withdrawall'
 ]
 
-class TipSugar(commands.Bot):
+class TipMagi(commands.Bot):
 
     def __init__(self, command_prefix):
         super().__init__(command_prefix)
@@ -34,5 +34,5 @@ class TipSugar(commands.Bot):
         print("----------------------")
         await self.change_presence(activity=discord.Game(name="//help")) # change game playing
 
-bot = TipSugar(command_prefix='//')
+bot = TipMagi(command_prefix='//')
 bot.run(TOKEN)
