@@ -41,7 +41,7 @@ class Help(commands.Cog):
                 inline=True)
             embed.add_field(
                 name="**//tip**",
-                value="Tip specified user. [//tip @BeeHIVE Network 1] to tip 1 SUGAR",
+                value="Tip specified user. [//tip @Nugetzrul3 1] to tip 1 XMG",
                 inline=True)
             embed.add_field(
                 name="**//withdraw**",
@@ -82,7 +82,7 @@ class Help(commands.Cog):
                 inline=True)
             embed.add_field(
                 name="**//tip**",
-                value="Tip specified user. [//tip @BeeHIVE Network 1] to tip 1 SUGAR",
+                value="Tip specified user. [//tip @Nugetzrul3 1] to tip 1 XMG",
                 inline=True)
             embed.add_field(
                 name="**//withdraw**",

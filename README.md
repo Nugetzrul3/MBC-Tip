@@ -30,7 +30,7 @@ Number of Confirmations is 6 blocks.
 
 Address type is `bech32` (native segwit).
 
-In `withdraw`, amount must be at least 0.5 SUGAR.
+In `withdraw`, amount must be at least 0.5 MAGI.
 
 You can use Tip Magi on DM.
 
