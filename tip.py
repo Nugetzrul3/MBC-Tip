@@ -81,7 +81,7 @@ class Tip(commands.Cog):
                         name=ctx.author.display_name,
                         icon_url=ctx.author.avatar_url_as(format='png', size=256))
                     embed.add_field(
-                        name="amount must be at least 0.00000001 MAGI",
+                        name="amount must be at least 0.00000001 XMG",
                         value="`{0}`".format(amount))
                     embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                                      icon_url=self.bot.user.avatar_url_as(format='png', size=256))
@@ -119,7 +119,7 @@ class Tip(commands.Cog):
                             icon_url=ctx.author.avatar_url_as(format='png', size=256))
                         embed.add_field(
                             name="You don't have enough balances.",
-                            value="Your balances ```{0} MAGI```".format(client.getbalance(tipfrom, config.CONFIRM)))
+                            value="Your balances ```{0} XMG```".format(client.getbalance(tipfrom, config.CONFIRM)))
                         embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                                          icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
@@ -147,7 +147,7 @@ class Tip(commands.Cog):
                                     icon_url=ctx.author.avatar_url_as(format='png', size=256))
                                 embed.add_field(
                                     name="Thank you for donating!",
-                                    value="```{0} MAGI```".format(amount))
+                                    value="```{0} XMG```".format(amount))
                                 embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                                                  icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
@@ -174,7 +174,7 @@ class Tip(commands.Cog):
                                     name=ctx.author.display_name,
                                     icon_url=ctx.author.avatar_url_as(format='png', size=256))
                                 embed.add_field(
-                                    name="{0} tipped to {1} `{2} MAGI`".format(ctx.author.display_name,
+                                    name="{0} tipped to {1} `{2} XMG`".format(ctx.author.display_name,
                                                                                 self.bot.get_user(int(tipto)).display_name,
                                                                                 amount),
                                     value="yay!")

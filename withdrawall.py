@@ -61,8 +61,8 @@ class Withdrawall(commands.Cog):
                         name=ctx.author.display_name,
                         icon_url=ctx.author.avatar_url_as(format='png', size=256))
                     embed.add_field(
-                        name="Amount must be at least 0.5 MAGI.",
-                        value="Your balances : ```{0} MAGI```".format(client.getbalance(account, config.CONFIRM)))
+                        name="Amount must be at least 0.5 XMG.",
+                        value="Your balances : ```{0} XMG```".format(client.getbalance(account, config.CONFIRM)))
                     embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                                      icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
@@ -99,8 +99,8 @@ class Withdrawall(commands.Cog):
                             name=ctx.author.display_name,
                             icon_url=ctx.author.avatar_url_as(format='png', size=256))
                         embed.add_field(
-                            name="Withdrawal complete `{0} MAGI`\nwithdraw fee is `{1} MAGI`\nPlease check the transaction at the above link.".format(amount, str(config.FEE)),
-                            value="Your balances : `{0} MAGI`".format(client.getbalance(account, config.CONFIRM)))
+                            name="Withdrawal complete `{0} XMG`\nwithdraw fee is `{1} XMG`\nPlease check the transaction at the above link.".format(amount, str(config.FEE)),
+                            value="Your balances : `{0} XMG`".format(client.getbalance(account, config.CONFIRM)))
                         embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                                          icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
