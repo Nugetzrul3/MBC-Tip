@@ -1,7 +1,8 @@
 Tip Sugar
 ====
+Forked from Sugarchain's [Tip Bot](https://github.com/sugarchain-project/Tip-Sugar)
 
-A discord Tip-bot for Sugarchain
+A discord Tip-bot for Magi Coin
 
 ## Demo
 
@@ -13,17 +14,17 @@ Command prefix : `//`
 
 |Command                         |Description                                  |Example                                            |
 |--------------------------------|---------------------------------------------|---------------------------------------------------|
-|`//info`                        |Show information of Sugarchain.              |                                                   |
+|`//info`                        |Show information of Magi.                    |                                                   |
 |`//help`                        |Show help message.                           |                                                   |
 |`//balance`                     |Show your balances.                          |                                                   |
 |`//deposit`                     |Show your deposit address.                   |                                                   |
-|`//tip (@mention) (amount)`     |Tip specified amount to specified user.      |`//tip @ilmango 3.939`                             |
-|`//withdraw (address) (amount)` |Send specified amount to specified address.  |`//withdraw sugar1q4ppsuqpcmwg79q8mzlv47c6as0lvmd7vsmdxvw 10` |
-|`//withdrawall (address)`       |Send your all balances to specified address. |`//withdrawall sugar1q4ppsuqpcmwg79q8mzlv47c6as0lvmd7vsmdxvw` |
+|`//tip (@mention) (amount)`     |Tip specified amount to specified user.      |`//tip @Nugetzrul3 3.939`                          |
+|`//withdraw (address) (amount)` |Send specified amount to specified address.  |`//withdraw 9NAnjoh31HTFGzQXRh1XN226ebsv79vikL 10` |
+|`//withdrawall (address)`       |Send your all balances to specified address. |`//withdrawall 9NAnjoh31HTFGzQXRh1XN226ebsv79vikL` |
 
 ### Tips
 
-withdraw-fee is 0.001 SUGAR.
+withdraw-fee is 0.001 MAGI.
 
 Number of Confirmations is 6 blocks.
 
@@ -31,23 +32,17 @@ Address type is `bech32` (native segwit).
 
 In `withdraw`, amount must be at least 0.5 SUGAR.
 
-You can use Tip Sugar on DM.
+You can use Tip Magi on DM.
 
-You can donate by tip to Tip Sugar. (example : /tip @Tip Sugar 3.939)
+You can donate by tip to Tip Magi. (example : /tip @Magi-Tip 3.939)
 
 The address changes with each deposit, but you can use the previous one. However, it is recommended to use the latest address.
 
-Please do not use Tip Sugar as a receiving address for mining rewards to prevent the increase of load due to the increase of UTXO.
+Please do not use Tip Magi addresses as a receiving address for mining rewards to prevent the increase of load due to the increase of UTXO.
 
 ## Licence
 
 [MIT](https://github.com/sugarchain-project/Tip-Sugar/blob/master/LICENSE)
-
-## Digression
-
-I develop Tip Sugar as a personal hobby and for studying. So Tip Sugar **may contain bad-code**.
-
-I would be grateful if you could suggest a better implementation by PR.
 
 ## Requirement
 
