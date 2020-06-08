@@ -71,7 +71,7 @@ class Info(commands.Cog):
                 inline=True)
             embed.add_field(
                 name="__Client Version__",
-                value="`{0}`".format(client_version),
+                value="`{0}`".format("m-core:" + client_version),
                 inline=True)
             embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                              icon_url=self.bot.user.avatar_url_as(format='png', size=256))
