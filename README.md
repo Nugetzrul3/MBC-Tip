@@ -1,4 +1,4 @@
-Tip Sugar
+Tip Magi
 ====
 Forked from Sugarchain's [Tip Bot](https://github.com/sugarchain-project/Tip-Sugar)
 
@@ -24,13 +24,13 @@ Command prefix : `//`
 
 ### Tips
 
-withdraw-fee is 0.001 MAGI.
+withdraw-fee is 0.001 XMG.
 
 Number of Confirmations is 6 blocks.
 
 Address type is `bech32` (native segwit).
 
-In `withdraw`, amount must be at least 0.5 MAGI.
+In `withdraw`, amount must be at least 0.5 XMG.
 
 You can use Tip Magi on DM.
 
