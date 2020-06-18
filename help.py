@@ -18,7 +18,7 @@ class Help(commands.Cog):
             user_db.add_user(user_id, user_name)
 
             embed = discord.Embed(
-                title="**Magi Bot Command List:**",
+                title="**MBC Bot Command List:**",
                 color=0x7152b6)
             embed.set_author(
                 name=ctx.author.display_name,
@@ -29,27 +29,27 @@ class Help(commands.Cog):
                 inline=True)
             embed.add_field(
                 name="**//info**",
-                value="Show Magi Core wallet/blockchain info.",
+                value="Show MBC Core wallet/blockchain info.",
                 inline=True)
             embed.add_field(
                 name="**//balance**",
-                value="Show your Magi balances.",
+                value="Show your MBC balances.",
                 inline=True)
             embed.add_field(
                 name="**//deposit**",
-                value="Show your Magi deposit address.",
+                value="Show your MBC deposit address.",
                 inline=True)
             embed.add_field(
                 name="**//tip**",
-                value="Tip specified user. [//tip @Nugetzrul3 1] to tip 1 XMG",
+                value="Tip specified user. [//tip @Nugetzrul3 1] to tip 1 MBC",
                 inline=True)
             embed.add_field(
                 name="**//withdraw**",
-                value="Withdraw Magi from your wallet. [//withdraw ADDRESS AMOUNT]",
+                value="Withdraw MBC from your wallet. [//withdraw ADDRESS AMOUNT]",
                 inline=True)
             embed.add_field(
                 name="**//withdrawall**",
-                value="Withdraw all Magi from your wallet. [//withdrawall ADDRESS]",
+                value="Withdraw all MBC from your wallet. [//withdrawall ADDRESS]",
                 inline=True)
             embed.set_thumbnail(url=self.bot.user.avatar_url_as(format='png', size=1024))
             embed.set_footer(text="TipBot v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))
@@ -59,7 +59,7 @@ class Help(commands.Cog):
             pass
 
             embed = discord.Embed(
-                title="**Magi Bot Command List:**",
+                title="**MBC Bot Command List:**",
                 color=0x7152b6)
             embed.set_author(
                 name=ctx.author.display_name,
@@ -70,27 +70,27 @@ class Help(commands.Cog):
                 inline=True)
             embed.add_field(
                 name="**//info**",
-                value="Show Magi Core wallet/blockchain info.",
+                value="Show MBC Core wallet/blockchain info.",
                 inline=True)
             embed.add_field(
                 name="**//balance**",
-                value="Show your Magi balances.",
+                value="Show your MBC balances.",
                 inline=True)
             embed.add_field(
                 name="**//deposit**",
-                value="Show your Magi deposit address.",
+                value="Show your MBC deposit address.",
                 inline=True)
             embed.add_field(
                 name="**//tip**",
-                value="Tip specified user. [//tip @Nugetzrul3 1] to tip 1 XMG",
+                value="Tip specified user. [//tip @Nugetzrul3 1] to tip 1 MBC",
                 inline=True)
             embed.add_field(
                 name="**//withdraw**",
-                value="Withdraw Magi from your wallet. [//withdraw ADDRESS AMOUNT]",
+                value="Withdraw MBC from your wallet. [//withdraw ADDRESS AMOUNT]",
                 inline=True)
             embed.add_field(
                 name="**//withdrawall**",
-                value="Withdraw all Magi from your wallet. [//withdrawall ADDRESS]",
+                value="Withdraw all MBC from your wallet. [//withdrawall ADDRESS]",
                 inline=True)
             embed.set_thumbnail(url=self.bot.user.avatar_url_as(format='png', size=1024))
             embed.set_footer(text="TipBot v{0}".format(config.VERSION), icon_url=self.bot.user.avatar_url_as(format='png', size=256))

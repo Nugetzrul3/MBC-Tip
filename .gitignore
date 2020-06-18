@@ -2,3 +2,4 @@
 .vscode
 tipsugar.db
 __pycache__
+config.py

@@ -27,9 +27,9 @@ class Deposit(commands.Cog):
                 icon_url=ctx.author.avatar_url_as(format='png', size=256))
             embed.add_field(
                 name="First of all, please type `//help`",
-                value="Welcome to world of Tip Magi !")
+                value="Welcome to world of Tip MBC !")
             embed.set_thumbnail(url=self.bot.user.avatar_url_as(format='png', size=1024))
-            embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+            embed.set_footer(text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                              icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
             await ctx.channel.send(embed=embed)
@@ -44,13 +44,13 @@ class Deposit(commands.Cog):
                 title="**Your deposit address**",
                 color=0x0043ff)
             embed.add_field(
-                name="please send XMG to this address.",
+                name="please send MBC to this address.",
                 value="Click to enlarge the QR code")
             embed.set_thumbnail(url='https://chart.googleapis.com/chart?cht=qr&chs=500x500&chl={0}'.format(address))
             embed.set_author(
                 name=user_name,
                 icon_url=ctx.author.avatar_url_as(format='png', size=256))
-            embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+            embed.set_footer(text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                              icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
             await ctx.channel.send(embed=embed)

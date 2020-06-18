@@ -29,9 +29,9 @@ class Balance(commands.Cog):
                 icon_url=ctx.author.avatar_url_as(format='png', size=256))
             embed.add_field(
                 name="First of all, please type `//help`",
-                value="Welcome to world of Tip Magi !")
+                value="Welcome to world of Tip MBC !")
             embed.set_thumbnail(url=self.bot.user.avatar_url_as(format='png', size=1024))
-            embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+            embed.set_footer(text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                             icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
             await ctx.channel.send(embed=embed)
@@ -51,9 +51,9 @@ class Balance(commands.Cog):
                 name=user_name,
                 icon_url=ctx.author.avatar_url_as(format='png', size=256))
             embed.add_field(
-                name="{0} XMG".format(str(balance)),
-                value="unconfirmed : {0} XMG".format(str(unconfirmed_balance)))
-            embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+                name="{0} MBC".format(str(balance)),
+                value="unconfirmed : {0} MBC".format(str(unconfirmed_balance)))
+            embed.set_footer(text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                             icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
             await ctx.channel.send(embed=embed)

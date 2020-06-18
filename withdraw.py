@@ -35,9 +35,9 @@ class Withdraw(commands.Cog):
                 icon_url=ctx.author.avatar_url_as(format='png', size=256))
             embed.add_field(
                 name="First of all, please type `//help`",
-                value="Welcome to world of Tip Magi !")
+                value="Welcome to world of Tip MBC !")
             embed.set_thumbnail(url=self.bot.user.avatar_url_as(format='png', size=1024))
-            embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+            embed.set_footer(text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                              icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
             await ctx.channel.send(embed=embed)
@@ -52,7 +52,7 @@ class Withdraw(commands.Cog):
                 embed.add_field(
                     name="Please check `//help` ",
                     value=" :mag: ")
-                embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+                embed.set_footer(text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                                  icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                 await ctx.channel.send(embed=embed)
@@ -65,9 +65,9 @@ class Withdraw(commands.Cog):
                         name=ctx.author.display_name,
                         icon_url=ctx.author.avatar_url_as(format='png', size=256))
                     embed.add_field(
-                        name="invalid amount. (amount must be at least 0.5 XMG)",
+                        name="invalid amount. (amount must be at least 0.5 MBC)",
                         value="`{0}`".format(str(amount)))
-                    embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+                    embed.set_footer(text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                                      icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                     await ctx.channel.send(embed=embed)
@@ -85,7 +85,7 @@ class Withdraw(commands.Cog):
                         embed.add_field(
                             name="invalid address.",
                             value="`{0}`".format(str(address)))
-                        embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+                        embed.set_footer(text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                                          icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                         await ctx.channel.send(embed=embed)
@@ -96,8 +96,8 @@ class Withdraw(commands.Cog):
                             icon_url=ctx.author.avatar_url_as(format='png', size=256))
                         embed.add_field(
                             name="You don't have enough balance.",
-                            value="Your balance : ```{0} XMG```".format(client.getbalance(account, config.CONFIRM)))
-                        embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+                            value="Your balance : ```{0} MBC```".format(client.getbalance(account, config.CONFIRM)))
+                        embed.set_footer(text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                                          icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                         await ctx.channel.send(embed=embed)
@@ -112,7 +112,7 @@ class Withdraw(commands.Cog):
                             embed.add_field(
                                 name="invalid amount.\n(You can not specify the einth decimal place or smaller than that.)",
                                 value="`{0}`".format(amount))
-                            embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+                            embed.set_footer(text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                                              icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                             await ctx.channel.send(embed=embed)
@@ -129,9 +129,9 @@ class Withdraw(commands.Cog):
                                 name=ctx.author.display_name,
                                 icon_url=ctx.author.avatar_url_as(format='png', size=256))
                             embed.add_field(
-                                name="Withdrawal complete `{0} XMG`\nwithdraw fee is `{1} XMG`\nPlease check the transaction at the above link.".format(sendamount, str(config.FEE)),
-                                value="Your balance : `{0} XMG`".format(client.getbalance(account, config.CONFIRM)))
-                            embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+                                name="Withdrawal complete `{0} MBC`\nwithdraw fee is `{1} MBC`\nPlease check the transaction at the above link.".format(sendamount, str(config.FEE)),
+                                value="Your balance : `{0} MBC`".format(client.getbalance(account, config.CONFIRM)))
+                            embed.set_footer(text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                                              icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                             await ctx.channel.send(embed=embed)

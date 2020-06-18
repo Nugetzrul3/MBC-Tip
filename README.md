@@ -1,8 +1,8 @@
-Tip Magi
+Tip MBC
 ====
 Forked from Sugarchain's [Tip Bot](https://github.com/sugarchain-project/Tip-Sugar)
 
-A discord Tip-bot for Magi Coin
+A discord Tip-bot for MBC Coin
 
 ## Demo
 
@@ -14,7 +14,7 @@ Command prefix : `//`
 
 |Command                         |Description                                  |Example                                            |
 |--------------------------------|---------------------------------------------|---------------------------------------------------|
-|`//info`                        |Show information of Magi.                    |                                                   |
+|`//info`                        |Show information of MBC.                    |                                                   |
 |`//help`                        |Show help message.                           |                                                   |
 |`//balance`                     |Show your balances.                          |                                                   |
 |`//deposit`                     |Show your deposit address.                   |                                                   |
@@ -24,21 +24,21 @@ Command prefix : `//`
 
 ### Tips
 
-withdraw-fee is 0.001 XMG.
+withdraw-fee is 0.001 MBC.
 
 Number of Confirmations is 6 blocks.
 
 Address type is `bech32` (native segwit).
 
-In `withdraw`, amount must be at least 0.5 XMG.
+In `withdraw`, amount must be at least 0.5 MBC.
 
-You can use Tip Magi on DM.
+You can use Tip MBC on DM.
 
-You can donate by tip to Tip Magi. (example : /tip @Magi-Tip 3.939)
+You can donate by tip to Tip MBC. (example : /tip @MBC-Tip 3.939)
 
 The address changes with each deposit, but you can use the previous one. However, it is recommended to use the latest address.
 
-Please do not use Tip Magi addresses as a receiving address for mining rewards to prevent the increase of load due to the increase of UTXO.
+Please do not use Tip MBC addresses as a receiving address for mining rewards to prevent the increase of load due to the increase of UTXO.
 
 ## Licence
 

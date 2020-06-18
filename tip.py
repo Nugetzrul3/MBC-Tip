@@ -35,9 +35,9 @@ class Tip(commands.Cog):
                 icon_url=ctx.author.avatar_url_as(format='png', size=256))
             embed.add_field(
                 name="First of all, please type `//help`",
-                value="Welcome to world of Tip Magi !")
+                value="Welcome to world of Tip MBC !")
             embed.set_thumbnail(url=self.bot.user.avatar_url_as(format='png', size=1024))
-            embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+            embed.set_footer(text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                              icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
             await ctx.channel.send(embed=embed)
@@ -53,7 +53,7 @@ class Tip(commands.Cog):
                     name="Please check `//help` ",
                     value=" :mag: ")
                 embed.set_footer(
-                    text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+                    text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                     icon_url=self.bot.user.avatar_url_as(format='png', size=256))
                 await ctx.channel.send(embed=embed)
             elif not str_isfloat(amount):
@@ -64,7 +64,7 @@ class Tip(commands.Cog):
                 embed.add_field(
                     name="invalid amount.",
                     value="`{0}`".format(amount))
-                embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+                embed.set_footer(text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                                  icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                 await ctx.channel.send(embed=embed)
@@ -81,9 +81,9 @@ class Tip(commands.Cog):
                         name=ctx.author.display_name,
                         icon_url=ctx.author.avatar_url_as(format='png', size=256))
                     embed.add_field(
-                        name="amount must be at least 0.00000001 XMG",
+                        name="amount must be at least 0.00000001 MBC",
                         value="`{0}`".format(amount))
-                    embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+                    embed.set_footer(text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                                      icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                     await ctx.channel.send(embed=embed)
@@ -96,7 +96,7 @@ class Tip(commands.Cog):
                         embed.add_field(
                             name="invalid user.",
                             value="`{0}`".format(str(mention)))
-                        embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+                        embed.set_footer(text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                                          icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                         await ctx.channel.send(embed=embed)
@@ -108,7 +108,7 @@ class Tip(commands.Cog):
                         embed.add_field(
                             name="You cannot tip to yourself.",
                             value=" :thinking: ")
-                        embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+                        embed.set_footer(text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                                          icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                         await ctx.channel.send(embed=embed)
@@ -119,8 +119,8 @@ class Tip(commands.Cog):
                             icon_url=ctx.author.avatar_url_as(format='png', size=256))
                         embed.add_field(
                             name="You don't have enough balances.",
-                            value="Your balances ```{0} XMG```".format(client.getbalance(tipfrom, config.CONFIRM)))
-                        embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+                            value="Your balances ```{0} MBC```".format(client.getbalance(tipfrom, config.CONFIRM)))
+                        embed.set_footer(text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                                          icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                         await ctx.channel.send(embed=embed)
@@ -136,7 +136,7 @@ class Tip(commands.Cog):
                                 embed.add_field(
                                     name="invalid amount.\n(You can not specify the einth decimal place or smaller than that.)",
                                     value="`{0}`".format(amount))
-                                embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+                                embed.set_footer(text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                                                  icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                                 await ctx.channel.send(embed=embed)
@@ -147,8 +147,8 @@ class Tip(commands.Cog):
                                     icon_url=ctx.author.avatar_url_as(format='png', size=256))
                                 embed.add_field(
                                     name="Thank you for donating!",
-                                    value="```{0} XMG```".format(amount))
-                                embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+                                    value="```{0} MBC```".format(amount))
+                                embed.set_footer(text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                                                  icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                                 await ctx.channel.send(embed=embed)
@@ -164,7 +164,7 @@ class Tip(commands.Cog):
                                     name="invalid amount.\n(You can not specify the einth decimal place or smaller than that.)",
                                     value="`{0}`".format(amount))
                                 embed.set_footer(
-                                    text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+                                    text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                                     icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                                 await ctx.channel.send(embed=embed)
@@ -174,11 +174,11 @@ class Tip(commands.Cog):
                                     name=ctx.author.display_name,
                                     icon_url=ctx.author.avatar_url_as(format='png', size=256))
                                 embed.add_field(
-                                    name="{0} tipped to {1} `{2} XMG`".format(ctx.author.display_name,
+                                    name="{0} tipped to {1} `{2} MBC`".format(ctx.author.display_name,
                                                                                 self.bot.get_user(int(tipto)).display_name,
                                                                                 amount),
                                     value="yay!")
-                                embed.set_footer(text="Tip Magi {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+                                embed.set_footer(text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                                                  icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
                                 await ctx.channel.send(embed=embed)
