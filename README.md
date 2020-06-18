@@ -19,8 +19,8 @@ Command prefix : `//`
 |`//balance`                     |Show your balances.                          |                                                   |
 |`//deposit`                     |Show your deposit address.                   |                                                   |
 |`//tip (@mention) (amount)`     |Tip specified amount to specified user.      |`//tip @Nugetzrul3 3.939`                          |
-|`//withdraw (address) (amount)` |Send specified amount to specified address.  |`//withdraw 9NAnjoh31HTFGzQXRh1XN226ebsv79vikL 10` |
-|`//withdrawall (address)`       |Send your all balances to specified address. |`//withdrawall 9NAnjoh31HTFGzQXRh1XN226ebsv79vikL` |
+|`//withdraw (address) (amount)` |Send specified amount to specified address.  |`//withdraw MYCCJaSvCkLv8ie9WNyuD74pdttpEE7Sh5 10` |
+|`//withdrawall (address)`       |Send your all balances to specified address. |`//withdrawall MYCCJaSvCkLv8ie9WNyuD74pdttpEE7Sh5` |
 
 ### Tips
 
