@@ -36,11 +36,12 @@ class Info(commands.Cog):
         else:
             pass
 
-            block = client.getinfo()['blocks']
+            block = client.getblockchaininfo()['blocks']
             hash_rate = round(client.getnetworkhashps() / 1000, 4)
-            difficulty_pow = client.getinfo()['difficulty']['proof-of-work']
-            connection = client.getinfo()['connections']
-            client_version = client.getinfo()['version']
+            difficulty = client.getblockchaininfo()['difficulty']
+            connection = client.getnetworkinfo()['connections']
+            client_version = client.getnetworkinfo()['subversion']
+            blockchain_size = round(client.getblockchaininfo()['size_on_disk'] / 1000000000, 3)
 
             embed = discord.Embed(
                 title="**Microbitcoin info**",
@@ -58,7 +59,7 @@ class Info(commands.Cog):
                 inline=True)
             embed.add_field(
                 name="__Difficulty__",
-                value="`{0}`".format(difficulty_pow),
+                value="`{0}`".format(difficulty),
                 inline=True)
             embed.add_field(
                 name="__Connection__",
@@ -66,7 +67,11 @@ class Info(commands.Cog):
                 inline=True)
             embed.add_field(
                 name="__Client Version__",
-                value="`{0}`".format("m-core:" + client_version),
+                value="`{0}`".format(client_version),
+                inline=True)
+            embed.add_field(
+                name="__Block chain size__",
+                value="`About {0} GB`".format(blockchain_size),
                 inline=True)
             embed.set_footer(text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
                              icon_url=self.bot.user.avatar_url_as(format='png', size=256))
