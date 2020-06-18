@@ -39,12 +39,11 @@ class Info(commands.Cog):
             block = client.getinfo()['blocks']
             hash_rate = round(client.getnetworkhashps() / 1000, 4)
             difficulty_pow = client.getinfo()['difficulty']['proof-of-work']
-            difficulty_pos = client.getinfo()['difficulty']['proof-of-stake']
             connection = client.getinfo()['connections']
             client_version = client.getinfo()['version']
 
             embed = discord.Embed(
-                title="**Magichain info**",
+                title="**Microbitcoin info**",
                 color=0x0043ff)
             embed.set_author(
                 name=ctx.author.display_name,
@@ -58,12 +57,8 @@ class Info(commands.Cog):
                 value="`{0} KH/s`".format(hash_rate),
                 inline=True)
             embed.add_field(
-                name="__Difficulty (POW)__",
+                name="__Difficulty__",
                 value="`{0}`".format(difficulty_pow),
-                inline=True)
-            embed.add_field(
-                name="__Difficulty (POS)__",
-                value="`{0}`".format(difficulty_pos),
                 inline=True)
             embed.add_field(
                 name="__Connection__",
