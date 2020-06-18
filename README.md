@@ -2,7 +2,7 @@ Tip MBC
 ====
 Forked from Sugarchain's [Tip Bot](https://github.com/sugarchain-project/Tip-Sugar)
 
-A discord Tip-bot for MBC Coin
+A discord Tip-bot for Microbitcoin
 
 ## Demo
 
