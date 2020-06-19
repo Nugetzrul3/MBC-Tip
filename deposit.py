@@ -17,44 +17,54 @@ class Deposit(commands.Cog):
     async def deposit(self, ctx):
         client = AuthServiceProxy(rpc_connection)
         user_id = str(ctx.author.id)
+        if ctx.channel.id == 723496777566781491:
 
-        if not user_db.check_user(user_id):
-            embed = discord.Embed(
-                title="**For first-use-user**",
-                color=0x0043ff)
-            embed.set_author(
-                name=ctx.author.display_name,
-                icon_url=ctx.author.avatar_url_as(format='png', size=256))
-            embed.add_field(
-                name="First of all, please type `//help`",
-                value="Welcome to world of Tip MBC !")
-            embed.set_thumbnail(url=self.bot.user.avatar_url_as(format='png', size=1024))
-            embed.set_footer(text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
-                             icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+            if not user_db.check_user(user_id):
+                embed = discord.Embed(
+                    title="**For first-use-user**",
+                    color=0x0043ff)
+                embed.set_author(
+                    name=ctx.author.display_name,
+                    icon_url=ctx.author.avatar_url_as(format='png', size=256))
+                embed.add_field(
+                    name="First of all, please type `//help`",
+                    value="Welcome to world of Tip MBC !")
+                embed.set_thumbnail(url=self.bot.user.avatar_url_as(format='png', size=1024))
+                embed.set_footer(text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+                                 icon_url=self.bot.user.avatar_url_as(format='png', size=256))
 
-            await ctx.channel.send(embed=embed)
+                await ctx.channel.send(embed=embed)
+            else:
+                pass
+
+                account = str(ctx.author.id)
+                user_name = ctx.author.display_name
+                address = client.getaccountaddress(account)
+
+                embed = discord.Embed(
+                    title="**Your deposit address**",
+                    color=0x0043ff)
+                embed.add_field(
+                    name="please send MBC to this address.",
+                    value="Click to enlarge the QR code")
+                embed.set_thumbnail(url='https://chart.googleapis.com/chart?cht=qr&chs=500x500&chl={0}'.format(address))
+                embed.set_author(
+                    name=user_name,
+                    icon_url=ctx.author.avatar_url_as(format='png', size=256))
+                embed.set_footer(text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
+                                 icon_url=self.bot.user.avatar_url_as(format='png', size=256))
+
+                await ctx.channel.send(embed=embed)
+                await ctx.channel.send("```{0}```".format(address))
+
         else:
-            pass
-
-            account = str(ctx.author.id)
-            user_name = ctx.author.display_name
-            address = client.getaccountaddress(account)
-
-            embed = discord.Embed(
-                title="**Your deposit address**",
-                color=0x0043ff)
+            embed = discord.Embed(title="Oops", color=0x7152b6)
+            embed.set_author(name=ctx.author.display_name, icon_url=ctx.author.avatar_url_as(format='png', size=256))
             embed.add_field(
-                name="please send MBC to this address.",
-                value="Click to enlarge the QR code")
-            embed.set_thumbnail(url='https://chart.googleapis.com/chart?cht=qr&chs=500x500&chl={0}'.format(address))
-            embed.set_author(
-                name=user_name,
-                icon_url=ctx.author.avatar_url_as(format='png', size=256))
-            embed.set_footer(text="Tip MBC {0} [Owner: {1}]".format(config.VERSION, self.bot.get_user(config.OWNER_ID)),
-                             icon_url=self.bot.user.avatar_url_as(format='png', size=256))
-
+                name="Wrong Channel",
+                value="Please ur #testrestriction to use this tipbot",
+            )
             await ctx.channel.send(embed=embed)
-            await ctx.channel.send("```{0}```".format(address))
 
 def setup(bot):
     bot.add_cog(Deposit(bot))
