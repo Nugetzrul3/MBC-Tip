@@ -95,7 +95,7 @@ class Withdrawall(commands.Cog):
 
                             embed = discord.Embed(
                                 title="**Block explorer**",
-                                url='https://m-chain.info/tx/{0}'.format(txid),
+                                url='https://microbitcoinorg.github.io/explorer/#/address/{0}'.format(txid),
                                 color=0x0043ff)
                             embed.set_author(
                                 name=ctx.author.display_name,
