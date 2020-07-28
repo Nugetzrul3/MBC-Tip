@@ -14,7 +14,7 @@ class Help(commands.Cog):
         user_id = str(ctx.author.id)
         user_name = ctx.author.name
 
-        if ctx.channel.id == 723496777566781491:
+        if ctx.channel.id == 723493757860708714:
 
             if not user_db.check_user(user_id):
                 user_db.add_user(user_id, user_name)
@@ -103,7 +103,7 @@ class Help(commands.Cog):
             embed.set_author(name=ctx.author.display_name, icon_url=ctx.author.avatar_url_as(format='png', size=256))
             embed.add_field(
                 name="Wrong Channel",
-                value="Please ur #testrestriction to use this tipbot",
+                value="Please use #tipbot to use this tipbot",
             )
             await ctx.channel.send(embed=embed)
 
