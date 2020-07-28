@@ -126,7 +126,7 @@ class Withdraw(commands.Cog):
 
                                 embed = discord.Embed(
                                     title="**Block explorer**",
-                                    url='https://microbitcoinorg.github.io/explorer/#/address/{0}'.format(txid), color=0x0043ff)
+                                    url='https://microbitcoinorg.github.io/explorer/#/transaction/{0}'.format(txid), color=0x0043ff)
                                 embed.set_author(
                                     name=ctx.author.display_name,
                                     icon_url=ctx.author.avatar_url_as(format='png', size=256))
